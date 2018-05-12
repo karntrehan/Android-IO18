@@ -13,7 +13,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 ### Components
 * **Foundation** - Handles Android device fragmentation efficiently and help writing concise, testable code
-    * [AppCompat](#appcompat) :package: - Handle app behaviour on older versions of Android efficiently
+    * [AppCompat / Support Library / AndroidX](#appcompat) :package: - Handle app behaviour on older versions of Android efficiently
     * [AndroidKTX](#androidktx) :new: - Android specific extensions to write consizer Kotlin code
     * [Multidex](https://developer.android.com/studio/build/multidex.html) - Cross the 65K limit smoothly
     * [Test](https://developer.android.com/topic/libraries/testing-support-library/index.html) - Test your functions and Android UI easily
@@ -47,7 +47,33 @@ At the Google I/O 2018 there were various Android related launches, talks and di
     * [WearOS by Google](https://developer.android.com/wear) - Build apps for WearOS
 
 ## AppCompat
-[Webpage](https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat) | [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
+### a.k.a SupportLibrary a.k.a AndroidX
+[Webpage](https://developer.android.com/topic/libraries/support-library/) | [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
+
+* Support libraries will now be called AndroidX (Android Extensions)
+* Are going to be a part of Android Jetpack
+* **Changes**
+    * Feature-based artifacts. eg - `ViewPager` will have its own dependency rather than being bundled with `support-v4`
+    * **Versioning to be reset from 28.0.0 to 1.0.0**
+    * Strict semantic versioning (Major.Minor.BugFix) i.e. - everything on 1.4 will work on 1.5 till 2.0. Breaking changes only on Major versions
+    * **Per artifact versioning** i.e. RecyclerView could be on 1.4 and ViewPager could be on 1.2
+    * **Artifact names to be changed**. API specific info like v4, v7 to be dropped and replaced with `androidx.<feature>:<feature>-<sub-feature>`
+* **Migration**
+    * Automated tool in Android Studio 3.2 Canary 15+
+* **New Releases**
+    * [RecyclerView Selection](https://developer.android.com/reference/androidx/recyclerview/selection/package-summary) - Allow users to select multiple elements in your `RecyclerView`. (Like Google Photos)
+    * [RecyclerView ListAdapter](https://developer.android.com/reference/android/support/v7/recyclerview/extensions/ListAdapter) - Simpler way to use DiffUtil with animated updates and concurrency support on `RecyclerView`
+    * androidx.webkit - Provides access to latest `WebView` platform APIs
+    * androidx.browser - Renamed from Chrome custom-tabs.
+    * HEIF format images support - Coming soon to older versions
+    * [Material Components](https://github.com/material-components/material-components-android) - Use components following Material Design guidelines easily in your app. Includes:
+        * TextFields
+        * TextInputs
+        * Button
+        * BottomAppBar - **Actions in app**
+        * BottomNavigationBar - **Sections in app**
+        * MaterialCardView
+
 
 ## AndroidKTX
 [Webpage](https://developer.android.com/kotlin/ktx) | [Video](https://www.youtube.com/watch?v=st1XVfkDWqk) | [Source code](https://github.com/android/android-ktx)
@@ -60,8 +86,6 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 #### Articles
 * [Exploring KTX for Android - Joe Birch](https://medium.com/exploring-android/exploring-ktx-for-android-13a369795b51)
-
-#### Samples
 
 ## Architecture Components
 [Webpage](https://developer.android.com/topic/libraries/architecture/) | [Video](https://www.youtube.com/watch?v=pErTyQpA390)
@@ -82,10 +106,10 @@ At the Google I/O 2018 there were various Android related launches, talks and di
         binding.setLifecycleOwner(viewLifeCycleOwner)
         ```
     * Data binding v2 to support incremental compiling and make multi-modular apps build faster
-    * Supports data binding in Instant Apps
+    * **Supports data binding in Instant Apps**
 * **Room**
     * Room 1.1 has better support for threading
-    * Due to threading and WriteAheadLogging (WAL) queries to different tables would run in parallel rather than serially
+    * Due to threading and WriteAheadLogging (WAL) **queries to different tables would run in parallel rather than serially**
     * `@RawQuery` helps you create queries at run-time allowing you to query columns dynamically.
         ```kotlin
         @RawQuery
@@ -93,13 +117,13 @@ At the Google I/O 2018 there were various Android related launches, talks and di
         ```
 * **What's next?**
     * Lifecycle aware tools in Android studio - like NavigationEditor
-    * Adding templates into Android studio for `ViewModel`
+    * **Adding templates** into Android studio for `ViewModel`
     * More architecture components into Jetpack
-    * Make other Google APIs "architecture-components-aware"
-    * Sample apps and Codelabs would be refactored to use architecture components
+    * **Make other Google APIs "architecture-components-aware"**
+    * Sample apps and Codelabs would be **refactored** to use architecture components
     * Areas under lens:
         * Error Handling
-        * Saved State
+        * **Saved State**
         * Fragments & Lifecycles
         * Making components Kotlin idiomatic
 
