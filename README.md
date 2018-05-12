@@ -3,10 +3,10 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 ## Android Jetpack :new:
 
-### [Webpage](https://developer.android.com/jetpack/) || [Videos](https://www.youtube.com/results?search_query=android+jetpack)
+### [Webpage](https://developer.android.com/jetpack/) | [Videos](https://www.youtube.com/results?search_query=android+jetpack)
 
-### Summary
 *A set of libraries, tools and architectural guidance to help make it quick and easy to build great Android apps.*
+
 Brings development tools, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
 
 ### Components
@@ -44,27 +44,36 @@ Brings development tools, best / recommended practises, recommended app behaviou
     * [TV](https://developer.android.com/tv) - Build apps for Android TV with ease
     * [WearOS by Google](https://developer.android.com/wear) - Build apps for WearOS
 
-### Details
+## AppCompat
+[Webpage](https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat) | [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
 
-#### AppCompat
-[Webpage](https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat) || [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
+## AndroidKTX
+[Webpage](https://developer.android.com/kotlin/ktx) | [Video](https://www.youtube.com/watch?v=st1XVfkDWqk) | [Source code](https://github.com/android/android-ktx)
 
-#### AndroidKTX
-[Webpage](https://developer.android.com/kotlin/ktx) || [Video](https://www.youtube.com/watch?v=st1XVfkDWqk)
+* An Android specific Kotlin extension library part of Android Jetpack
+* Abstracts Android boilerplate code into extension functions making Kotlin code idiomatic, consize and safer
+* Reduces the need for multiple confusing Util classes and adds functionality directly to `String`, `ViewGroup`, `View`, `Color`, `Fragments` etc 
+* Contains extensions to elements only in the Android framework
+* Has extensions for core framework elements, fragments, palette, collections, lifecycle-reativestreams,sqlite, navigation and work-manager.
 
-#### Navigation
-[Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) || [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
+### Articles
+* [Exploring KTX for Android - Joe Birch](https://medium.com/exploring-android/exploring-ktx-for-android-13a369795b51)
 
-#### Paging
-[Webpage](https://developer.android.com/topic/libraries/architecture/paging/) || [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
+### Samples
 
-#### WorkManager
-[Webpage](https://developer.android.com/topic/libraries/architecture/workmanager) || [Video](https://www.youtube.com/watch?v=IrKoBFLwTN0)
+## Navigation
+[Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
 
-#### Slices
-[Webpage](https://developer.android.com/guide/slices/) || [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
+## Paging
+[Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
+
+## WorkManager
+[Webpage](https://developer.android.com/topic/libraries/architecture/workmanager) | [Video](https://www.youtube.com/watch?v=IrKoBFLwTN0)
+
+## Slices
+[Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
 
-## Contribution
+# Contribution
 Looking for a lot of contributions! 
 Kindly refer the [Contribution](CONTRIBUTING.md) guidelines for smoother contributions.
