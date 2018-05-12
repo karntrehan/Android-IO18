@@ -5,9 +5,11 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 ### [Webpage](https://developer.android.com/jetpack/) | [Videos](https://www.youtube.com/results?search_query=android+jetpack)
 
-*A set of libraries, tools and architectural guidance to help make it quick and easy to build great Android apps.*
+*A set of libraries, tools and architectural guides to help make it quick and easy to build great Android apps.*
 
-Brings development tools, components, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
+* Brings development tools, components, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
+* Contains 4 major components each of which (and their sub-components) can be used individually.
+* Cannot be used as a dependency or a library. Is just an umbrella term for all the libraries maintained by Google to make it easier and faster to develop apps.
 
 ### Components
 * **Foundation** - Handles Android device fragmentation efficiently and help writing concise, testable code
