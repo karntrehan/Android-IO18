@@ -116,6 +116,34 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
 
+
+
+## Android Things :traffic_light:
+
+Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 prodution ready version.This section has all Android Things related video Whats'new ? updates and best practises
+
+[**Website**](https://developer.android.com/things/)   |   [**Playlist**](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH)   |   [**Androiod Thing Console**](https://partner.android.com/things/console/u/0/?pli=1)
+
+
+   - [**What's New ?**](https://www.youtube.com/watch?v=e_PI_Npb3-U) : Learn more about the breadth of hardware reference designs, the operating system, building apps, device management, and support from chip vendors.
+   
+   
+   - [**Device Provisioning and Authentication**](https://www.youtube.com/watch?v=gkjV-TWLkIc&t=875s) : This talk will discuss how to support authentication, provisioning from a mobile device, and device attestation.
+   
+   
+   - [**Android Things Console**](https://www.youtube.com/watch?v=PDBG9U-oNXY): Android Things provides a powerful developer Console that manages your device deployments. Learn more about how to take your APKs and hardware configurations, and build them into system images, which can then be rolled out to all of your devices via over-the-air updates.
+   
+   
+   - [**System On Modules**](https://www.youtube.com/watch?v=cyphkm5XluA): How to create your own SOM carrier boards, including creating the design from scratch, working with a fabrication company, assembly and testing, and taking it all the way to production.
+   
+   
+   - [**Build Real Consumer Devices**](https://www.youtube.com/watch?v=zBpP2kxDa2M) : This talk will walk through the journey of building consumer devices like Smart Displays using Android Things
+   
+   
+   - [**Build effective OEM-level apps**](https://www.youtube.com/watch?v=dVtYVjGGYmE) : As an Android Things OEM. How should you structure your code? Should you use activities or services? Should the code be running in the foreground or the background? Do you package all the code into one APK, or split components up into modules? Find answers to all of these questions and more with best practices for building OEM-level apps.
+   
+
+
 # Contribution
 Looking for a lot of contributions! 
 Kindly refer the [Contribution](CONTRIBUTING.md) guidelines for smoother contributions.
