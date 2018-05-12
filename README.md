@@ -63,6 +63,46 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 #### Samples
 
+## Architecture Components
+[Webpage](https://developer.android.com/topic/libraries/architecture/) | [Video](https://www.youtube.com/watch?v=pErTyQpA390)
+
+* 52% Android devs showed interest in using the components
+* `AppCompatActivity` & `Fragment` implement `LifecycleOwner`
+* **LifecycleOwner**
+    * When using `Fragments` and `LiveData`+`ViewModel`, change the calls to use the Fragment lifecycle
+        ```kotlin
+        viewmodel.livedata.observe(viewLifeCycleOwner,Observer{
+            //Handle new data
+        })
+        ```
+* **Data binding**
+    * Pass the `LifecycleOwner` to your binding initializer to allow bindings to respect Activity lifecycle
+        ```kotlin
+        val binding: ViewBinding = DatabindingUtil.getBinding(user)
+        binding.setLifecycleOwner(viewLifeCycleOwner)
+        ```
+    * Data binding v2 to support incremental compiling and make multi-modular apps build faster
+    * Supports data binding in Instant Apps
+* **Room**
+    * Room 1.1 has better support for threading
+    * Due to threading and WriteAheadLogging (WAL) queries to different tables would run in parallel rather than serially
+    * `@RawQuery` helps you create queries at run-time allowing you to query columns dynamically.
+        ```kotlin
+        @RawQuery
+        fun getHouses(query:SimpleSQLiteQuery): List<Houses>
+        ```
+* **What's next?**
+    * Lifecycle aware tools in Android studio - like NavigationEditor
+    * Adding templates into Android studio for `ViewModel`
+    * More architecture components into Jetpack
+    * Make other Google APIs "architecture-components-aware"
+    * Sample apps and Codelabs would be refactored to use architecture components
+    * Areas under lens:
+        * Error Handling
+        * Saved State
+        * Fragments & Lifecycles
+        * Making components Kotlin idiomatic
+
 ## Navigation
 [Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
 
