@@ -75,6 +75,9 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 ## Slices
 [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
+## App Bundle
+[Webpage](https://developer.android.com/guide/app-bundle/) | [Video](https://www.youtube.com/watch?v=bViNOUeFuiQ)
+
 
 # Contribution
 Looking for a lot of contributions! 
