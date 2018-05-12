@@ -7,12 +7,12 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 *A set of libraries, tools and architectural guidance to help make it quick and easy to build great Android apps.*
 
-Brings development tools, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
+Brings development tools, components, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
 
 ### Components
 * **Foundation** - Handles Android device fragmentation efficiently and help writing concise, testable code
-    * [AppCompat](#AppCompat) :package: - Handle app behaviour on older versions of Android efficiently
-    * [AndroidKTX](#AndroidKTX) :new: - Android specific extensions to write consizer Kotlin code
+    * [AppCompat](#appcompat) :package: - Handle app behaviour on older versions of Android efficiently
+    * [AndroidKTX](#androidktx) :new: - Android specific extensions to write consizer Kotlin code
     * [Multidex](https://developer.android.com/studio/build/multidex.html) - Cross the 65K limit smoothly
     * [Test](https://developer.android.com/topic/libraries/testing-support-library/index.html) - Test your functions and Android UI easily
 
@@ -20,11 +20,11 @@ Brings development tools, best / recommended practises, recommended app behaviou
     * [Databinding](https://developer.android.com/topic/libraries/data-binding/) - Cut down on `findViewById`s and make data observing / reactive UI elements
     * [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle) - Create lifecycle aware components
     * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - A observable stream of data your Activities & Fragments can react to
-    * [Navigation](#Navigation) :new: - Define in-app navigation stacks in a single, concise testable file
-    * [Paging](#Paging) :package: - Paginate loading data from data sources
+    * [Navigation](#navigation) :new: - Define in-app navigation stacks in a single, concise testable file
+    * [Paging](#paging) :package: - Paginate loading data from data sources
     * [Room](https://developer.android.com/topic/libraries/architecture/room) - An SQLlite ORM to handle database management in your apps
     * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Handle data effectively around lifecycle changes of Android components
-    * [WorkManager](#WorkManager) :new: - Run parameterized background tasks efficiently
+    * [WorkManager](#workmanager) :new: - Run parameterized background tasks efficiently
 
 * **Behavior** - Recommended behaviour for common use cases and tools to achieve them
     * [Download Manager](https://developer.android.com/reference/android/app/DownloadManager) - Handle large data downloads
@@ -32,7 +32,7 @@ Brings development tools, best / recommended practises, recommended app behaviou
     * [Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) - Show notifications across all versions of Android
     * [Permissions](https://developer.android.com/guide/topics/permissions/index.html) - Check and request permissions effectively
     * [Sharing](https://developer.android.com/training/sharing/shareaction) - Allow users to share to your app and directly to other users on your platform
-    * [Slices](#Slices) :new: - Allow Google Search to launch intents into your app with highlights triggering the user action
+    * [Slices](#slices) :new: - Allow Google Search to launch intents into your app with highlights triggering the user action
 
 * **UI** - Common UI elements to build effective UIs on different Android versions and platforms
     * [Animation & Transitions](https://developer.android.com/training/animation/) - Build smooth & transitioning UIs
@@ -56,10 +56,10 @@ Brings development tools, best / recommended practises, recommended app behaviou
 * Contains extensions to elements only in the Android framework
 * Has extensions for core framework elements, fragments, palette, collections, lifecycle-reativestreams,sqlite, navigation and work-manager.
 
-### Articles
+#### Articles
 * [Exploring KTX for Android - Joe Birch](https://medium.com/exploring-android/exploring-ktx-for-android-13a369795b51)
 
-### Samples
+#### Samples
 
 ## Navigation
 [Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
