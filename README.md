@@ -63,3 +63,8 @@ Brings development tools, best / recommended practises, recommended app behaviou
 
 #### Slices
 [Webpage](https://developer.android.com/guide/slices/) || [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
+
+
+## Contribution
+Looking for a lot of contributions! 
+Kindly refer the [Contribution](CONTRIBUTING.md) guidelines for smoother contributions.
