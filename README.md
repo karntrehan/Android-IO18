@@ -59,7 +59,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 
 ## AppCompat
 ### a.k.a SupportLibrary a.k.a AndroidX
-[Webpage](https://developer.android.com/topic/libraries/support-library/) | [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
+### [Webpage](https://developer.android.com/topic/libraries/support-library/) | [Video](https://www.youtube.com/watch?v=jdKUm8tGogw)
 
 * Support libraries will now be called AndroidX (Android Extensions)
 * Are going to be a part of Android Jetpack
@@ -86,12 +86,12 @@ At the Google I/O 2018 there were various Android related launches, talks and di
         * MaterialCardView
 
 
-## AndroidKTX 
-[Webpage](https://developer.android.com/kotlin/ktx) | [Video](https://www.youtube.com/watch?v=st1XVfkDWqk) | [Source code](https://github.com/android/android-ktx)
+## AndroidKTX
+### [Webpage](https://developer.android.com/kotlin/ktx) | [Video](https://www.youtube.com/watch?v=st1XVfkDWqk) | [Source code](https://github.com/android/android-ktx)
 
 * An Android specific Kotlin extension library part of Android Jetpack
-* Abstracts Android boilerplate code into extension functions making Kotlin code idiomatic, consize and safer
-* Reduces the need for multiple confusing Util classes and adds functionality directly to `String`, `ViewGroup`, `View`, `Color`, `Fragments` etc 
+* Abstracts Android boilerplate code into extension functions making Kotlin code idiomatic, concise and safer
+* Reduces the need for multiple confusing Util classes and adds functionality directly to `String`, `ViewGroup`, `View`, `Color`, `Fragments` etc
 * Contains extensions to elements only in the Android framework
 * Has extensions for core framework elements, fragments, palette, collections, lifecycle-reativestreams,sqlite, navigation and work-manager.
 
@@ -99,7 +99,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 * [Exploring KTX for Android - Joe Birch](https://medium.com/exploring-android/exploring-ktx-for-android-13a369795b51)
 
 ## Architecture Components
-[Webpage](https://developer.android.com/topic/libraries/architecture/) | [Video](https://www.youtube.com/watch?v=pErTyQpA390)
+### [Webpage](https://developer.android.com/topic/libraries/architecture/) | [Video](https://www.youtube.com/watch?v=pErTyQpA390)
 
 * 52% Android devs showed interest in using the components
 * `AppCompatActivity` & `Fragment` implement `LifecycleOwner`
@@ -139,7 +139,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
         * Making components Kotlin idiomatic
 
 ## Navigation
-[Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
+### [Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
 
 ### Description:
 * The Navigation Architecture Component simplifies the implementation of navigation between destinations in your app (A destination is a specific screen in an app)
@@ -169,21 +169,51 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 * Ability to specify argument types and default values if some args are optional.
 * Internally creates classes to fetch arguments and exposes them as properties via ClassNameArgs.fromBundle(arguments)
 
-## Paging 
-[Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
+## Paging
+### [Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
 
 ## WorkManager
-[Webpage](https://developer.android.com/topic/libraries/architecture/workmanager) | [Video](https://www.youtube.com/watch?v=IrKoBFLwTN0)
+### [Webpage](https://developer.android.com/topic/libraries/architecture/workmanager) | [Video](https://www.youtube.com/watch?v=IrKoBFLwTN0)
 
-## Slices 
-[Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
+*The WorkManager API makes it easy to specify deferrable, asynchronous tasks and when they should run*
+
+* The jobs will be **guaranteed** to run in the range as well **constraints** specified.
+* Works in coordination with Doze mode.
+* **Does not require Google Play Services**
+* Can **chain jobs** to run sequentially based on previous results or parallely.
+* `doWork()` (responsible for performing the intended request) by-default **runs on the background thread**.
+* Work can be:
+    * [OneTimeWorkRequest](https://developer.android.com/reference/androidx/work/OneTimeWorkRequest) - Request for non-repeating work.
+    * [PeriodicWorkRequest](https://developer.android.com/reference/androidx/work/PeriodicWorkRequest) - Request for repeating work.
+*  [Constraints](https://developer.android.com/reference/androidx/work/Constraints) can be around - Network, Battery, Idle and Storage on device
+*  Can observe the status of the work request as a `LiveData` of [WorkStatus](https://developer.android.com/reference/androidx/work/WorkStatus)
+*  In chaining, output of one or more jobs can become the input of another.
+*  A job can be cancelled by calling the `cancelWorkById(id)`
+*  A job can be attached a tag to make debugging easier using `addTag()` on WorkRequest.
+*  Tags can also be used cancel all the requests belonging to a particular tag.
+*  **Periodic work can be scheduled only after 15 mins**
+*  Periodic work cannot be chained.
+*  Under the hood delegates and uses
+    *  JobScheduler (API 23+)
+    *  Firebase JobDispatcher (if app includes Firebase JobDispatcher)
+    *  AlarmManager + Broadcast Receivers
+* Provides a `TestDriver` to test the work and run synchronously
+* Currently in `1.0.0-alpha01`
+* Has an **additional Kotlin extensions** library for Kotlin users
+
+#### Articles
+* [Exploring Jetpack: Scheduling tasks with Work Manager - Keval Patel](https://android.jlelse.eu/exploring-jetpack-scheduling-tasks-with-work-manager-fba20d7c69bf)
+* [Exploring Jetpack: The power of chains in the WorkManager APIs - Keval Patel](https://android.jlelse.eu/exploring-jetpack-the-power-of-chains-in-the-workmanager-apis-30509ca4b2c)
+
+## Slices
+### [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
 
 ## Android Things :traffic_light:
 
-Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 prodution ready version.This section has all Android Things related video Whats'new ? updates and best practises
+Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 production ready version. This section has all Android Things related video what's new, updates and best practises
 
-[**Website**](https://developer.android.com/things/)   |   [**Playlist**](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH)   |   [**Android Things Console**](https://partner.android.com/things/console/u/0/?pli=1)
+### [Website](https://developer.android.com/things/)   |   [Playlist](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH)   |   [Android Things Console](https://partner.android.com/things/console/u/0/?pli=1)
 
 
    - [**What's New ?**](https://www.youtube.com/watch?v=e_PI_Npb3-U) : Learn more about the breadth of hardware reference designs, the operating system, building apps, device management, and support from chip vendors.
@@ -205,5 +235,5 @@ Android Things is Google's platform to support the development of Internet of Th
    
 
 # Contribution
-Looking for a lot of contributions! 
+Looking for a lot of contributions!
 Kindly refer the [Contribution](CONTRIBUTING.md) guidelines for smoother contributions.
