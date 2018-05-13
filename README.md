@@ -141,6 +141,34 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 ## Navigation
 [Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
 
+### Description:
+* The Navigation Architecture Component simplifies the implementation of navigation between destinations in your app (A destination is a specific screen in an app)
+* By default, the Navigation Architecture Component includes support for Fragments and Activities as destinations, but you can also add support for new types of destinations. A set of destinations compose an app’s “navigation graph.”
+
+### Principles:
+* Focuses on the Activity being an entry point and container, whereas fragments take the center stage for content and navigation between screens.
+* Abstraction layer for navigation, performs Activity transitions, Fragment Transactions and back stack maintenance seamlessly for you.
+* Declaring your Navigation graph ahead-of-time so that the system can understand it and execute Navigational code for you.
+
+### Requirements:
+* Android Studio 3.2 - Canary 14+
+
+### Implementation:
+* Create a navigation graph (looks like a Wireframe) within XML / Code and link screens with each other (both forward and backward linking if needed)
+* Use the NavigationController either
+    * Set a view's onClickListener with Navigation.createNavigateOnClickListener(nextScreenId, args) for navigating when clicked
+    * At the point of navigation, after business logic, call View.findNavController().navigate(R.id.nextScreenId)
+
+### Bonus: Interoperability
+* Hooks up with BottomNavigationView, Toolbar and other top-level navigational views for back navigation, selections and automagic transitions when specifying destinations in Menu resource files.
+* Hooks up directly with the Manifest Merger so that all Deeplinks / Intent Filters for a given Activity are populated in the Manifest at build time.
+* Easier testability of navigational logic since NavigationController can be tested in isolation.
+
+### Bonus: Safe Args
+* Compile-time checking for Navigation arguments to simplify argument passing between Navigation components.
+* Ability to specify argument types and default values if some args are optional.
+* Internally creates classes to fetch arguments and exposes them as properties via ClassNameArgs.fromBundle(arguments)
+
 ## Paging 
 [Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
 
