@@ -1,7 +1,18 @@
 # Android @ Google I/O 2018
 At the Google I/O 2018 there were various Android related launches, talks and discussions. Here is one attempt to bring all of the updates under one page for fellow Android Developers to refer and learn.
 
-## Android Jetpack :new:
+# Contents
+* [**Android Jetpack**](#android-jetpack) :new:
+* [**AppCompat / Support Library / AndroidX**](#appcompat) :package:
+* [**AndroidKTX**](#androidktx) :new:
+* [**Architecture components**](#architecture-components) :package:
+* [**Navigation**](#navigation) :new:
+* [**Paging**](#paging) :new:
+* [**WorkManager**](#workmanager) :new:
+* [**Slices**](#slices) :new:
+* [**Android Things**](#android-things-traffic_light) :package:
+
+## Android Jetpack
 
 ### [Webpage](https://developer.android.com/jetpack/) | [Videos](https://www.youtube.com/results?search_query=android+jetpack)
 
@@ -75,7 +86,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
         * MaterialCardView
 
 
-## AndroidKTX
+## AndroidKTX 
 [Webpage](https://developer.android.com/kotlin/ktx) | [Video](https://www.youtube.com/watch?v=st1XVfkDWqk) | [Source code](https://github.com/android/android-ktx)
 
 * An Android specific Kotlin extension library part of Android Jetpack
@@ -130,23 +141,21 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 ## Navigation
 [Webpage](https://developer.android.com/topic/libraries/architecture/navigation/) | [Video](https://www.youtube.com/watch?v=8GCXtCjtg40)
 
-## Paging
+## Paging 
 [Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
 
 ## WorkManager
 [Webpage](https://developer.android.com/topic/libraries/architecture/workmanager) | [Video](https://www.youtube.com/watch?v=IrKoBFLwTN0)
 
-## Slices
+## Slices 
 [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
-
-
 
 
 ## Android Things :traffic_light:
 
 Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 prodution ready version.This section has all Android Things related video Whats'new ? updates and best practises
 
-[**Website**](https://developer.android.com/things/)   |   [**Playlist**](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH)   |   [**Androiod Thing Console**](https://partner.android.com/things/console/u/0/?pli=1)
+[**Website**](https://developer.android.com/things/)   |   [**Playlist**](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH)   |   [**Android Things Console**](https://partner.android.com/things/console/u/0/?pli=1)
 
 
    - [**What's New ?**](https://www.youtube.com/watch?v=e_PI_Npb3-U) : Learn more about the breadth of hardware reference designs, the operating system, building apps, device management, and support from chip vendors.
@@ -166,7 +175,6 @@ Android Things is Google's platform to support the development of Internet of Th
    
    - [**Build effective OEM-level apps**](https://www.youtube.com/watch?v=dVtYVjGGYmE) : As an Android Things OEM. How should you structure your code? Should you use activities or services? Should the code be running in the foreground or the background? Do you package all the code into one APK, or split components up into modules? Find answers to all of these questions and more with best practices for building OEM-level apps.
    
-
 
 # Contribution
 Looking for a lot of contributions! 
