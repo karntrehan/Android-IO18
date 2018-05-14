@@ -294,6 +294,21 @@ viewModel.concertList.subscribe({flowableList ->
 ## Slices
 ### [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
+## App Bundle
+[Webpage](https://developer.android.com/guide/app-bundle/) | [Video](https://www.youtube.com/watch?v=bViNOUeFuiQ)
+- An Android App Bundle is a new upload format that includes all your app’s compiled code and resources, but defers APK generation and signing to Google Play.
+- It uses Google Play’s new app serving model, called Dynamic Delivery. It will generate apk based on the user's device configuration  such as screen density, CPU architecture, locale etc. Your user downloads only resources required for his/her device.
+- There will be three apks: 
+   - **Base APK:** This APK contains code and resources that all other split APKs can access and provides the basic functionality of your app. 
+   - **Configuration APKs:** It includes resources for diffrent screen density, CPU architecture, locale etc.
+   - **Dynamic feature APKs:** These are the APKs that are not required at the install time but it will be downloaded and installed in real-time when the feature is required. 
+
+### Requirements:
+* Android Studio 3.2 - Canary 14+. Android Studio 3.2 provides an option to [configure your project for Dynamic Delivery](https://developer.android.com/guide/app-bundle/configure) while generating signed apk.
+* In order to use App Bundle feature, you must enroll in the [App Signing](https://support.google.com/googleplay/android-developer/answer/7384423?hl=en ) on Google Play console. 
+
+#### Codelab
+* [Your First Android App Bundle](https://codelabs.developers.google.com/codelabs/your-first-dynamic-app/index.html#0)
 
 ## Android Things :traffic_light:
 
