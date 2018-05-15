@@ -10,6 +10,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 * [**Paging**](#paging) :new:
 * [**WorkManager**](#workmanager) :new:
 * [**Slices**](#slices) :new:
+* [**App Bundle**](#app-bundle) :new:
 * [**Android Things**](#android-things-traffic_light) :package:
 
 ## Android Jetpack
@@ -178,6 +179,9 @@ viewmodel.livedata.observe(viewLifeCycleOwner,Observer{ //viewLifeCycleOwner is 
 
 #### Codelab
 * [Navigation Codelab](https://codelabs.developers.google.com/codelabs/android-navigation/index.html#0)
+
+#### Article
+* [Exploring Android's Navigation Architecture Component - Nish Tahir](https://willowtreeapps.com/ideas/exploring-androids-navigation-architecture-component)
 
 ## Paging
 ### [Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
