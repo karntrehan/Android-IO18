@@ -6,26 +6,34 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 * [**AppCompat / Support Library / AndroidX**](#appcompat) :package:
 * [**AndroidKTX**](#androidktx) :new:
 * [**Architecture components**](#architecture-components) :package:
+    * [LifecycleOwner](##lifecycleowner)
+    * [Data Binding](#data-binding)
+    * [Room](#room)
 * [**Navigation**](#navigation) :new:
 * [**Paging**](#paging) :new:
 * [**WorkManager**](#workmanager) :new:
 * [**Slices**](#slices) :new:
 * [**App Bundle**](#app-bundle) :new:
+* [**Android Design Tools**](#android-design-tools) :package:
+    * [Layout Editor](#layout-editor)
+    * [Sample Data](#sample-data)
+    * [ConstraintLayout](#constraintlayout)
 * [**Android Things**](#android-things-traffic_light) :package:
+
 
 ## Android Jetpack
 ### [Webpage](https://developer.android.com/jetpack/) | [Videos](https://www.youtube.com/results?search_query=android+jetpack)
 
 *A set of libraries, tools and architectural guides to help make it quick and easy to build great Android apps.*
 
-* Brings development tools, components, best / recommended practises, recommended app behaviours and common UI elements together under one roof for developer reference and usage.
+* Brings development tools, components, best / recommended practices, recommended app behaviors and common UI elements together under one roof for developer reference and usage.
 * Contains 4 major components each of which (and their sub-components) can be used individually.
 * Cannot be used as a dependency or a library. Is just an umbrella term for all the libraries maintained by Google to make it easier and faster to develop apps.
 
 ### Components
 * **Foundation** - Handles Android device fragmentation efficiently and help writing concise, testable code
-    * [AppCompat / Support Library / AndroidX](#appcompat) :package: - Handle app behaviour on older versions of Android efficiently
-    * [AndroidKTX](#androidktx) :new: - Android specific extensions to write consizer Kotlin code
+    * [AppCompat / Support Library / AndroidX](#appcompat) :package: - Handle app behavior on older versions of Android efficiently
+    * [AndroidKTX](#androidktx) :new: - Android specific extensions to write conciser Kotlin code
     * [Multidex](https://developer.android.com/studio/build/multidex.html) - Cross the 65K limit smoothly
     * [Test](https://developer.android.com/topic/libraries/testing-support-library/index.html) - Test your functions and Android UI easily
 
@@ -35,7 +43,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
     * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - A observable stream of data your Activities & Fragments can react to
     * [Navigation](#navigation) :new: - Define in-app navigation stacks in a single, concise testable file
     * [Paging](#paging) :package: - Paginate loading data from data sources
-    * [Room](https://developer.android.com/topic/libraries/architecture/room) - An SQLlite ORM to handle database management in your apps
+    * [Room](https://developer.android.com/topic/libraries/architecture/room) - An SQLite ORM to handle database management in your apps
     * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Handle data effectively around lifecycle changes of Android components
     * [WorkManager](#workmanager) :new: - Run parameterized background tasks efficiently
 
@@ -183,6 +191,7 @@ viewmodel.livedata.observe(viewLifeCycleOwner,Observer{ //viewLifeCycleOwner is 
 #### Article
 * [Exploring Android's Navigation Architecture Component - Nish Tahir](https://willowtreeapps.com/ideas/exploring-androids-navigation-architecture-component)
 
+
 ## Paging
 ### [Webpage](https://developer.android.com/topic/libraries/architecture/paging/) | [Video](https://www.youtube.com/watch?v=BE5bsyGGLf4)
 
@@ -223,7 +232,7 @@ class MyAdapter():PagedListAdapter<User, UserViewHolder>(
 ```
 
 * [PagedList.Config](https://developer.android.com/reference/android/arch/paging/PagedList.Config) can be used to override the page-size ( amount of items to load in one page), initial load size (amount of items to load on the first page), prefetch distance (prefetch distance which defines how far ahead to load) and enable place holders(display null placeholders)
-* Placeholders when enabled, send nulls to the adapter when data is yet to be successfully pulled and can be redered to show loading to the user.
+* Placeholders when enabled, send nulls to the adapter when data is yet to be successfully pulled and can be rendered to show loading to the user.
 
 ### Code Sample (Reactive):
 ```kotlin
@@ -255,7 +264,6 @@ viewModel.concertList.subscribe({flowableList ->
 #### Samples
 * [googlesamples/android-architecture-components/PagingSample/](https://github.com/googlesamples/android-architecture-components/tree/master/PagingSample)
 * [googlesamples/android-architecture-components/PagingWithNetworkSample/](https://github.com/googlesamples/android-architecture-components/tree/master/PagingWithNetworkSample)
-
 
 
 ## WorkManager
@@ -298,13 +306,15 @@ viewModel.concertList.subscribe({flowableList ->
 ## Slices
 ### [Webpage](https://developer.android.com/guide/slices/) | [Video](https://www.youtube.com/watch?v=a7IVH5aNwwc)
 
+
 ## App Bundle
-[Webpage](https://developer.android.com/guide/app-bundle/) | [Video](https://www.youtube.com/watch?v=bViNOUeFuiQ)
+### [Webpage](https://developer.android.com/guide/app-bundle/) | [Video](https://www.youtube.com/watch?v=bViNOUeFuiQ)
+
 - An Android App Bundle is a new upload format that includes all your app’s compiled code and resources, but defers APK generation and signing to Google Play.
 - It uses Google Play’s new app serving model, called Dynamic Delivery. It will generate apk based on the user's device configuration  such as screen density, CPU architecture, locale etc. Your user downloads only resources required for his/her device.
 - There will be three apks: 
    - **Base APK:** This APK contains code and resources that all other split APKs can access and provides the basic functionality of your app. 
-   - **Configuration APKs:** It includes resources for diffrent screen density, CPU architecture, locale etc.
+   - **Configuration APKs:** It includes resources for different screen density, CPU architecture, locale etc.
    - **Dynamic feature APKs:** These are the APKs that are not required at the install time but it will be downloaded and installed in real-time when the feature is required. 
 
 ### Requirements:
@@ -314,30 +324,93 @@ viewModel.concertList.subscribe({flowableList ->
 #### Codelab
 * [Your First Android App Bundle](https://codelabs.developers.google.com/codelabs/your-first-dynamic-app/index.html#0)
 
+
+## Android Design Tools
+### [Video](https://www.youtube.com/watch?v=ytZteMo4ETk)
+
+### Layout Editor
+* **Convert View** - Easily convert an existing ViewGroup into a `ConstraintLayout` or `LinearLayout` or `CoordinatorLayout` by right clicking on it in the Layout Editor.
+* **Navigate to included layout** - If you have an included layout, clicking on it in the editor will open its hierarchy there itself, instead of having to open it separately.
+
+### [Tools Attributes](https://developer.android.com/studio/write/tool-attributes) 
+ Additional information to Android Studio to display test content, apply test parameters during development. All parameters are ignored during run time. Ex: 
+* `tools:listitem` : populate item's layout in a RecyclerView in the editor
+* `tools:itemCount` : populate X number of item's in a RecyclerView in the editor
+* `tools:showIn` : to show an included layout as it appears in the parent
+* `tools:text` : set a probable text to a TextView
+* `tools:textColor`  - set a probable color to a TextView 
+
+### Sample Data
+Introduced in AS 3.0. It helps you populate data which is not available at the same time. Each time a random value is picked from the sample space.
+* **Creation** - Right click on module > New > Sample Data Directory > Right Click on newly created  `sampledata` directory > New > File > {filename}  
+* Types supported are: Colors, Strings, Dimensions, Images &  Json
+* Predefined Sample data:
+    * Names: `@tools:sample/first_name`
+    * Cities: `@tools:sample/us_cities` 
+    * Lorem Ipsum: `@tools:sample/lorem` 
+    * Lorem Ipsum(x words): `@tools:sample/lorem[x]` 
+    * Avatars: `@tools:sample/avatars` 
+* Can select Sample Data resources from the **Resource Picker in AS**
+* In AS 3.2 you will be able to **override random selection and set one resource** to be picked each time.
+
+### ConstraintLayout
+### [Webpage](https://developer.android.com/training/constraint-layout/)
+
+*ConstraintLayout allows you to create large and complex layouts with a flat view hierarchy (no nested view groups).* Sometimes referred to as a **RelativeLayout on Steroids**.
+
+* ConstraintLayout 1.0 allowed: 
+    * Relative Positioning
+    * Center and Bias  Positioning
+    * Group behavior (chains / weights)
+    * Visibility behavior
+    * Aspect Ratio
+    * ConstraintSet
+    * Guidelines
+* ConstraintLayout 1.1 added, in addition to others, `Barriers` - position an element relative to a set of elements.
+* ConstraintLayout 2.0 additions:
+    * Helpers - Elements that help you define constraints and design UIs but are not rendered on the screen at runtime. Ex - Guidelines. Categorized as:
+        * LayoutManipulation - help you build layouts
+        * Post-Layout Manipulation - fly in an element at first launch
+        * Rendering and decorating
+    * Layers
+    * Circular Reveal - Reveal the referenced layout elements in a circular fashion.
+    * Decorators - A put animations on your views. Like a Lava Decoration to reveal elements as blobs. Ex: 
+        * Lava
+        * Bottom bar
+    * Constraint State - A separate XML file to define various states in which your constraints can animate.
+    * MotionLayout - A sub-class of ConstraintLayout to support smoother transitions
+
+#### Articles
+* [Android Tools attributes: listItem & sample data rocks! - Thibault de Lambilly](https://android.jlelse.eu/android-tools-attributes-listitem-sample-data-rocks-bbf49aaa9f07)
+* [ConstraintLayout 2.0 sneak peek - Nicolas Roard & John Hoford](https://speakerdeck.com/camaelon/constraintlayout-2-dot-0-sneak-peek)
+
+#### Codelab
+* [Use ConstraintLayout to design your Android views](https://codelabs.developers.google.com/codelabs/constraint-layout/)
+
+
 ## Android Things :traffic_light:
 
-Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 production ready version. This section has all Android Things related video what's new, updates and best practises
+Android Things is Google's platform to support the development of Internet of Things devices. Which is now in 1.0 production ready version. This section has all Android Things related video what's new, updates and best practices
 
 ### [Website](https://developer.android.com/things/) | [Playlist](https://www.youtube.com/playlist?list=PLpgHr8jf5brGpgyiQpdDrGbFfbxNEbNWH) | [Android Things Console](https://partner.android.com/things/console/u/0/?pli=1)
 
+- [**What's New ?**](https://www.youtube.com/watch?v=e_PI_Npb3-U) : Learn more about the breadth of hardware reference designs, the operating system, building apps, device management, and support from chip vendors.
 
-   - [**What's New ?**](https://www.youtube.com/watch?v=e_PI_Npb3-U) : Learn more about the breadth of hardware reference designs, the operating system, building apps, device management, and support from chip vendors.
-   
-   
-   - [**Device Provisioning and Authentication**](https://www.youtube.com/watch?v=gkjV-TWLkIc&t=875s) : This talk will discuss how to support authentication, provisioning from a mobile device, and device attestation.
-   
-   
-   - [**Android Things Console**](https://www.youtube.com/watch?v=PDBG9U-oNXY): Android Things provides a powerful developer Console that manages your device deployments. Learn more about how to take your APKs and hardware configurations, and build them into system images, which can then be rolled out to all of your devices via over-the-air updates.
-   
-   
-   - [**System On Modules**](https://www.youtube.com/watch?v=cyphkm5XluA): How to create your own SOM carrier boards, including creating the design from scratch, working with a fabrication company, assembly and testing, and taking it all the way to production.
-   
-   
-   - [**Build Real Consumer Devices**](https://www.youtube.com/watch?v=zBpP2kxDa2M) : This talk will walk through the journey of building consumer devices like Smart Displays using Android Things
-   
-   
-   - [**Build effective OEM-level apps**](https://www.youtube.com/watch?v=dVtYVjGGYmE) : As an Android Things OEM. How should you structure your code? Should you use activities or services? Should the code be running in the foreground or the background? Do you package all the code into one APK, or split components up into modules? Find answers to all of these questions and more with best practices for building OEM-level apps.
-   
+
+- [**Device Provisioning and Authentication**](https://www.youtube.com/watch?v=gkjV-TWLkIc&t=875s) : This talk will discuss how to support authentication, provisioning from a mobile device, and device attestation.
+
+
+- [**Android Things Console**](https://www.youtube.com/watch?v=PDBG9U-oNXY): Android Things provides a powerful developer Console that manages your device deployments. Learn more about how to take your APKs and hardware configurations, and build them into system images, which can then be rolled out to all of your devices via over-the-air updates.
+
+
+- [**System On Modules**](https://www.youtube.com/watch?v=cyphkm5XluA): How to create your own SOM carrier boards, including creating the design from scratch, working with a fabrication company, assembly and testing, and taking it all the way to production.
+
+
+- [**Build Real Consumer Devices**](https://www.youtube.com/watch?v=zBpP2kxDa2M) : This talk will walk through the journey of building consumer devices like Smart Displays using Android Things
+
+
+- [**Build effective OEM-level apps**](https://www.youtube.com/watch?v=dVtYVjGGYmE) : As an Android Things OEM. How should you structure your code? Should you use activities or services? Should the code be running in the foreground or the background? Do you package all the code into one APK, or split components up into modules? Find answers to all of these questions and more with best practices for building OEM-level apps.
+
 
 # Contribution
 Looking for a lot of contributions!
