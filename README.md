@@ -382,6 +382,8 @@ Introduced in AS 3.0. It helps you populate data which is not available at the s
 
 #### Articles
 * [Android Tools attributes: listItem & sample data rocks! - Thibault de Lambilly](https://android.jlelse.eu/android-tools-attributes-listitem-sample-data-rocks-bbf49aaa9f07)
+
+#### Videos
 * [ConstraintLayout 2.0 sneak peek - Nicolas Roard & John Hoford](https://vimeo.com/265304656)
 
 #### Codelab
