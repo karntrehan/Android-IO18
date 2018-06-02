@@ -16,6 +16,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
 * [**App Bundle**](#app-bundle) :new:
 * [**Android Design Tools**](#android-design-tools) :package:
     * [Layout Editor](#layout-editor)
+    * [Tools Attributes](#tools-attributes)
     * [Sample Data](#sample-data)
     * [ConstraintLayout](#constraintlayout)
 * [**Android Things**](#android-things-traffic_light) :package:
