@@ -19,6 +19,7 @@ At the Google I/O 2018 there were various Android related launches, talks and di
     * [Tools Attributes](#tools-attributes)
     * [Sample Data](#sample-data)
     * [ConstraintLayout](#constraintlayout)
+*  [**Android Development Tools**](#android-development-tools) :package:
 * [**Android Things**](#android-things-traffic_light) :package:
 
 
@@ -389,6 +390,45 @@ Introduced in AS 3.0. It helps you populate data which is not available at the s
 
 #### Codelab
 * [Use ConstraintLayout to design your Android views](https://codelabs.developers.google.com/codelabs/constraint-layout/)
+
+
+## Android Development Tools
+### [Video](https://youtu.be/WxAZk7A7OkM)
+
+### Android Studio 3.1
+- [D8](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html) with Desugar integrated lead to 16% increase in build speed on Android Studio 3.1.0
+- **SQL code editing** to allow code completion and project navigation on your SQL queries for Room and vanilla SQLite.
+- **Kotlin Lint checks** in the IDE and console
+- **C++ CPU profiler** to analyse performance impact of C++ code. 
+- **Network Threading Profiler** to help analyse each thread in multi-threaded network calls.
+- **Emulator quick boot** launches the emulator in under 3 seconds
+
+### Android Studio 3.2
+- Supports Android P developer preview APIs
+- Supports Android App Bundle
+- **What's New Window** to inboard with new features, changes, etc.
+- Generate Signed APK now has new option to generate App Bundle
+- **Apk analyser** works on App Bundle files
+- Supports creation of **Dynamic modules** in the new module creation wizard
+- Profilers now breaks performance analysis into **sessions** to allow comparing of sessions
+- **CPU profiler** can be triggered from code using 
+    ```java
+    Debug.startMethodTracking()
+    ```
+- **Network profiler** shows threads, requests and responses 
+- Memory profiler shows JNI references.
+- The new **Energy profiler** helps monitor battery life
+- Emulator saves **snapshots** to load back into same states
+    - Screen Recording added
+- Adds **Google Sceneform tool** to support building of AR apps
+    - Also allows previewing 3D models inside AS
+-  Jetpack refactoring tools allows auto-migration to Android X in gradle and XML files
+-  Supports **[Navigation](#navigation)** Editor
+-  Supports **[Sample Data](#sample-data)** wizards
+-  Support will be added for  **ConstraintLayout motion** in the future
+-  Runs on Pixel Chromebook
+    -  No ADB yet
+- D8 is the default dexer and R8 is the new optimizer and shrinker to improve build speeds as well as replace Proguard
 
 
 ## Android Things :traffic_light:
